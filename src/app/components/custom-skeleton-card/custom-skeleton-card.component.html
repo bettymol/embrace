@@ -1,0 +1,74 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-item lines="none" class="ion-no-padding">
+                <ion-label position="fixed" class="ion-no-margin left">
+                    <ion-card class="ion-no-margin ion-text-center no-border-right-radius" [ngClass]="'green'">
+                        <ion-card-header class="ion-no-padding">
+                            <ion-item lines="none" class="ion-no-margin ion-no-padding no-border-radius"
+                                      [ngClass]="'green1'">
+                                <ion-icon slot="start" class="margin1" name="cloud" color="medium"></ion-icon>
+                                <ion-label class="ion-text-right margin2">
+                                    <h5>
+                                        <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+                                    </h5>
+                                </ion-label>
+                            </ion-item>
+                        </ion-card-header>
+                        <h4 class="ion-padding-top">
+                            <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                        </h4>
+                        <ion-avatar>
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-avatar>
+                        <h3>
+                            <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                        </h3>
+                        <p>
+                            <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                        </p>
+                    </ion-card>
+                </ion-label>
+                <ion-label class="ion-no-margin">
+                    <ion-card class="ion-no-margin no-border-left-radius" [ngClass]="'green2'">
+                        <ion-card-header class="ion-no-padding">
+                            <ion-item lines="none">
+                                <ion-label class="ion-no-margin">
+                                    <h3>
+                                        <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                                    </h3>
+                                    <p>
+                                        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+                                    </p>
+                                </ion-label>
+                                <ion-icon slot="end" name="ios-send" color="medium" size="large"></ion-icon>
+                            </ion-item>
+                        </ion-card-header>
+                        <ion-item lines="none">
+                            <ion-label *ngFor="let week of wList">
+                                <h4>
+                                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                                </h4>
+                                <ion-badge color="warning">
+                                    <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                                </ion-badge>
+                                <p class="weather">
+                                    <ion-icon name="sunny" size="large" color="medium"></ion-icon>
+                                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item lines="none" class="bottom ion-text-center">
+                            <ion-label>
+                                <p>
+                                    <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                                </p>
+                            </ion-label>
+                            <ion-icon name="ios-arrow-forward" slot="end" color="medium"></ion-icon>
+                        </ion-item>
+                    </ion-card>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,18 @@
+<custom-header [title]="'Home'" [hidden]="false"></custom-header>
+
+<ion-content>
+    <custom-slides [list]="list" [option]="option"></custom-slides>
+
+    <ion-row>
+        <ion-col (click)="tabclick(item?.url)" size="6" *ngFor="let item of list1" class="ion-text-center ion-padding">
+            <ion-icon [name]="item.icon" size="large" color="secondary"></ion-icon>
+            <h5>{{item.title}}</h5>
+            <p>{{item.content}}</p>
+        </ion-col>
+    </ion-row>
+   
+   
+    
+
+   
+</ion-content>

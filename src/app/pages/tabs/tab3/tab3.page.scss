@@ -1,0 +1,10 @@
+:host {
+  ion-fab-button {
+    margin-bottom: 15px;
+  }
+
+  .fab-bottom {
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}

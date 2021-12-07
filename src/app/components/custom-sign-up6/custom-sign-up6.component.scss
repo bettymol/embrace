@@ -1,0 +1,22 @@
+:host {
+  ion-grid {
+    margin-top: 90px;
+  }
+
+  ion-card {
+    overflow: visible;
+    padding: 16px 0px 16px 0px;
+    margin-bottom: 30px;
+    box-shadow: 3px 11px 43px 6px rgba(0, 0, 0, 0.75) !important;
+    background: var(--ion-color-dark) !important;
+  }
+
+  ion-avatar {
+    margin: -53px auto 10px;
+  }
+
+  ion-item {
+    --background: transparent !important;
+    --border-color: var(--ion-color-primary-contrast) !important;
+  }
+}

@@ -1,0 +1,88 @@
+:host {
+  .left {
+    max-width: 150px;
+    margin-right: 9px;
+    float: left;
+  }
+
+  .right {
+    float: left;
+    width: calc(100% - 162px);
+  }
+
+  .active {
+    ion-card-content {
+      transform: translateY(0%) !important;
+      padding-bottom: 56px;
+    }
+  }
+
+  .line {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    border-top: 2px solid #2a2c32;
+    width: calc(100% - 30px);
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    padding: 1px 10px 0;
+    margin: auto;
+    max-width: 75%;
+    width: auto;
+  }
+
+  ion-badge {
+    display: flex;
+    align-items: center;
+  }
+
+  .tool {
+    height: 18px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .btn {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(10px);
+    -webkit-transform: translateX(-50%) translateY(10px);
+    border-radius: 4px 4px 0 0;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: .075em;
+    z-index: 100;
+  }
+
+  .star {
+    position: absolute;
+    top: 0px;
+    z-index: 9;
+  }
+
+
+  ion-card-content {
+    background: var(--my-custom-primary);
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    padding: 5px;
+  }
+}

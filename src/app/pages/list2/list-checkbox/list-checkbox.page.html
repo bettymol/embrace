@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>List Checkbox Binding</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-list-checkbox [list]="list"></custom-list-checkbox>
+    <ion-button expand="block" (click)="onCheck()" color="warning">OK</ion-button>
+</ion-content>

@@ -1,0 +1,110 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Slide Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" size-md="6" class="ion-text-center">
+                <img class="logo" src="assets/images/starbucks.png"/>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" size-md="6">
+                <ion-slides>
+                    <ion-slide>
+                        <form [formGroup]="lForm">
+                            <ion-card class="transparent">
+                                <ion-item lines="none">
+                                    <ion-icon name="mail" color="light"></ion-icon>
+                                    <ion-input formControlName="email" type="text"></ion-input>
+                                </ion-item>
+                                <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                          *ngIf="!lForm.controls.email.valid  && lForm.controls.email.dirty">
+                                    please enter a valid email
+                                </ion-text>
+                                <ion-item lines="none">
+                                    <ion-icon name="lock" color="light"></ion-icon>
+                                    <ion-input formControlName="pwd" type="password"></ion-input>
+                                </ion-item>
+                                <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                          *ngIf="!lForm.controls.pwd.valid  && lForm.controls.pwd.dirty">
+                                    password Length at 6-15
+                                </ion-text>
+                                <ion-card-content>
+                                    <ion-button expand="block" color="secondary" [disabled]="!lForm.valid"
+                                                (click)="login()">Sign In
+                                    </ion-button>
+                                </ion-card-content>
+                            </ion-card>
+                        </form>
+                    </ion-slide>
+                    <ion-slide>
+                        <form [formGroup]="bForm">
+                            <ion-card class="transparent">
+                                <ion-item lines="none">
+                                    <ion-icon name="md-person" color="light"></ion-icon>
+                                    <ion-input formControlName="name" type="text"></ion-input>
+                                </ion-item>
+                                <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                          *ngIf="!bForm.controls.name.valid  && bForm.controls.name.dirty">
+                                    please enter a valid account
+                                </ion-text>
+                                <ion-item lines="none">
+                                    <ion-icon name="lock" color="light"></ion-icon>
+                                    <ion-input formControlName="pwd" type="password"></ion-input>
+                                </ion-item>
+                                <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                          *ngIf="!bForm.controls.pwd.valid  && bForm.controls.pwd.dirty">
+                                    password Length at 6-15
+                                </ion-text>
+                                <ion-card-content>
+                                    <ion-button expand="block" color="secondary" [disabled]="!bForm.valid"
+                                                (click)="login()">Sign In
+                                    </ion-button>
+                                </ion-card-content>
+                            </ion-card>
+                        </form>
+                    </ion-slide>
+                    <ion-slide>
+                        <form [formGroup]="pForm">
+                            <ion-card class="transparent">
+                                <ion-item lines="none">
+                                    <ion-icon name="phone-portrait" color="light"></ion-icon>
+                                    <ion-input formControlName="phone" type="tel"></ion-input>
+                                </ion-item>
+                                <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                          *ngIf="!pForm.controls.phone.valid  && pForm.controls.phone.dirty">
+                                    please enter a valid phone
+                                </ion-text>
+                                <ion-item lines="none">
+                                    <ion-icon name="lock" color="light"></ion-icon>
+                                    <ion-input formControlName="pwd" type="password"></ion-input>
+                                </ion-item>
+                                <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                          *ngIf="!pForm.controls.pwd.valid  && pForm.controls.pwd.dirty">
+                                    password Length at 6-15
+                                </ion-text>
+                                <ion-card-content>
+                                    <ion-button expand="block" color="secondary" [disabled]="!pForm.valid"
+                                                (click)="login()">Sign In
+                                    </ion-button>
+                                </ion-card-content>
+                            </ion-card>
+                        </form>
+                    </ion-slide>
+                </ion-slides>
+            </ion-col>
+            <ion-col size="12" size-md="6" class="ion-text-center">
+                <ion-button fill="clear" *ngFor="let item of logoList;let i=index" (click)="onGo(i)">
+                    <ion-icon slot="icon-only" [name]="item" color="warning" size="large"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

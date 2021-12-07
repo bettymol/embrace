@@ -1,0 +1,48 @@
+<ion-content fullscreen>
+    <div class="main-content">
+        <ion-header>
+            <ion-toolbar class="transparent">
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title>Mobile Login</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-row class="row">
+            <ion-col size="12" size-md="8" class="ion-text-center">
+                <img class="logo" src="assets/images/starbucks.png"/>
+            </ion-col>
+            <ion-col size="12" size-md="8">
+                <form [formGroup]="lForm">
+                    <ion-card class="transparent">
+                        <ion-item lines="none">
+                            <ion-icon name="phone-portrait" color="light"></ion-icon>
+                            <ion-input formControlName="phone" type="tel"></ion-input>
+                        </ion-item>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!lForm.controls.phone.valid  && lForm.controls.phone.dirty">
+                            please enter a valid phone
+                        </ion-text>
+                        <div class="send">
+                            <ion-item lines="none" style="width: 60%">
+                                <ion-icon name="mail" color="light"></ion-icon>
+                                <ion-input formControlName="code" type="tel" maxlength="4"></ion-input>
+                            </ion-item>
+                            <ion-button color="secondary" class="btn-default" [disabled]="isSend" (click)="onSend()">
+                                {{isSend ? seconds : 'Send'}}
+                            </ion-button>
+                        </div>
+                        <ion-text class="ion-text-center ion-padding-start" color="danger"
+                                  *ngIf="!lForm.controls.code.valid  && lForm.controls.code.dirty">
+                            auth code Length at 4
+                        </ion-text>
+                    </ion-card>
+                </form>
+            </ion-col>
+            <ion-col size="12" size-md="8">
+                <ion-button expand="block" color="secondary" [disabled]="!lForm.valid" (click)="login()">Sign In
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

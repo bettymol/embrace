@@ -1,0 +1,21 @@
+<ion-content fullscreen>
+    <video height="100%" width="100%" autoplay loop muted playsinline="true">
+        <source src="assets/images/video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <ion-header>
+        <ion-toolbar class="transparent">
+            <ion-buttons slot="start">
+                <ion-menu-button color="light"></ion-menu-button>
+            </ion-buttons>
+            <ion-title></ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <custom-sign-up1 [hidden]="!isShow"></custom-sign-up1>
+</ion-content>
+<ion-footer class="ion-text-center">
+    <ion-button fill="clear" (click)="onToggle()">
+        <ion-icon name="arrow-up" color="light" size="large" [class.active]="isShow"></ion-icon>
+    </ion-button>
+</ion-footer>

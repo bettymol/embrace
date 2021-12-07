@@ -1,0 +1,41 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-margin ion-no-padding background-size filter ion-text-center no-border-radius top-card"
+                      [ngStyle]="{'background-image':'url('+user.backImg+')'}">
+                <ion-avatar>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-avatar>
+                <ion-badge class="transparent">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-badge>
+                <ion-item lines="none" class="transparent ion-text-center">
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                    </ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row class="ion-padding">
+        <ion-col size="4" *ngFor="let item of list" class="ion-text-center">
+            <ion-card class="ion-no-margin tool">
+                <ion-label class="ion-text-center">
+                    <ion-icon [name]="item.icon" color="medium" size="large"></ion-icon>
+                    <ion-badge class="transparent ion-no-padding">
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-badge>
+                </ion-label>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

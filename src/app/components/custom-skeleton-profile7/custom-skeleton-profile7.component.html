@@ -1,0 +1,102 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-margin ion-padding-top" [ngStyle]="{'background-image':'url('+img+')'}">
+                <ion-item lines="none" class="transparent">
+                    <ion-avatar>
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h4>
+                            <ion-skeleton-text animated style="width: 37%"></ion-skeleton-text>
+                        </h4>
+                        <ion-text color="favorite">
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </ion-text>
+                    </ion-label>
+                    <ion-icon slot="end" size="large" color="medium" name="ios-create"></ion-icon>
+                </ion-item>
+                <ion-card-content class="ion-no-padding">
+                    <ion-row class="ion-padding">
+                        <ion-col size="4">
+                            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </ion-col>
+                        <ion-col size="4">
+                            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12">
+            <ion-card class="ion-no-margin">
+                <ion-item lines="none" class="transparent ion-no-padding ion-no-margin" style="margin-left: 8px">
+                    <ion-label class="ion-no-margin">
+                        <h5>
+                            <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+                        </h5>
+                    </ion-label>
+                    <ion-icon name="ios-arrow-forward" color="medium"></ion-icon>
+                </ion-item>
+                <custom-slide [list]="user?.list" [isCover]="true">
+                </custom-slide>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of fList">
+            <ion-card class="ion-no-margin">
+                <ion-item lines="none" class="transparent ion-no-padding">
+                    <ion-avatar>
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h5>
+                            <ion-skeleton-text animated style="width: 37%"></ion-skeleton-text>
+                        </h5>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                    <ion-icon name="more" color="medium"></ion-icon>
+                </ion-item>
+                <p class="ion-padding-start">
+                    <ion-text color="medium">
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                    </ion-text>
+                    <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+                </p>
+                <img [src]="item.img" [class.cover]="true">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-icon name="happy" color="medium"></ion-icon>
+                    <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+                    <ion-icon name="chatboxes" color="medium"></ion-icon>
+                    <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+                    <ion-icon name="flame" color="medium"></ion-icon>
+                    <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+                    <ion-skeleton-text slot="end" animated style="width: 20%"></ion-skeleton-text>
+                </ion-item>
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-button slot="end" size="small">
+                        <ion-icon name="happy" slot="icon-only" color="medium"></ion-icon>
+                        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                    </ion-button>
+                    <ion-button slot="end" size="small" class="ion-no-margin">
+                        <ion-icon name="chatboxes" slot="icon-only" color="medium"></ion-icon>
+                        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                    </ion-button>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

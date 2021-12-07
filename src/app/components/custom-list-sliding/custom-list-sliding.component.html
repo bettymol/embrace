@@ -1,0 +1,28 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" *ngFor="let item of list">
+            <ion-item-sliding>
+                <ion-item lines="none" class="box-shadow1">
+                    <ion-avatar>
+                        <img [src]="item.img">
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h4>{{item.name}}</h4>
+                        <p class="ion-text-wrap">{{item.title}}</p>
+                    </ion-label>
+                    <ion-note color="light" class="ion-float-right">
+                        <ion-icon name="ios-arrow-back" size="large" color="medium"></ion-icon>
+                    </ion-note>
+                </ion-item>
+                <ion-item-options side="end">
+                    <ion-item-option color="warning" (click)="onFavorite(item)">
+                        <ion-icon slot="icon-only" name="heart"></ion-icon>
+                    </ion-item-option>
+                    <ion-item-option color="danger" (click)="onDel(item)">
+                        <ion-icon slot="icon-only" name="trash"></ion-icon>
+                    </ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-col>
+    </ion-row>
+</ion-grid>

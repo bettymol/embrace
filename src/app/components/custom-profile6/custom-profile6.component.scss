@@ -1,0 +1,64 @@
+:host {
+  .top-card {
+    height: 257px;
+    overflow: visible;
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 30px auto 0px;
+      border-radius: 25px;
+    }
+  }
+
+  .like {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: -30px;
+    border: 0px !important;
+  }
+
+  .overflow {
+    overflow: visible;
+  }
+
+  .color1 {
+    background: #1389ee;
+  }
+
+  .color2 {
+    background: #e8104c;
+  }
+
+  .line {
+    border: 0;
+    width: 1px;
+    height: 70%;
+    background: #444;
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, rgb(188, 198, 214) 50%, hsla(0, 0%, 0%, 0) 100%);
+    margin: 0px 3px 0px 15px;
+  }
+
+  ion-badge {
+    margin-right: 5px;
+  }
+
+  ion-col {
+    & > ion-item {
+      margin: 10px 10px 30px 10px;
+      box-shadow: 7px 12px 33px -3px #b4b6b0;
+      --inner-padding-end: 0px !important;
+    }
+
+    & > ion-avatar {
+      flex-shrink: 0;
+      margin: 7px -13px;
+    }
+  }
+
+
+}

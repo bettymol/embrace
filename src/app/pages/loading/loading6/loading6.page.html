@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile Skeleton List</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="onToggle()">
+                <ng-template [ngIf]="isLoading" [ngIfElse]="eye">
+                    <ion-icon name="eye-off" color="warning" slot="icon-only"></ion-icon>
+                </ng-template>
+                <ng-template #eye>
+                    <ion-icon name="eye" color="warning" slot="icon-only"></ion-icon>
+                </ng-template>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-skeleton-profile *ngIf="isLoading"></custom-skeleton-profile>
+    <custom-loading6 *ngIf="!isLoading"></custom-loading6>
+</ion-content>

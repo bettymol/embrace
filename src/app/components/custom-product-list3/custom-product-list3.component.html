@@ -1,0 +1,21 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-card class="ion-no-padding ion-no-margin">
+                <ion-badge color="secondary" class="corner">${{item.price}}</ion-badge>
+                <img [src]="item.img">
+                <ion-item lines="none">
+                    <ion-label class="ion-text-center">
+                        <h4 class="ion-text-wrap">{{item.name}}</h4>
+                        <h5>Muscle Fast</h5>
+                    </ion-label>
+                    <ion-buttons slot="end">
+                        <ion-button>
+                            <ion-icon name="heart" color="danger" slot="icon-only" size="large"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

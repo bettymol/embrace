@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Profile List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+    <custom-skeleton-profile1 [user]="user" [list]="list" *ngIf="isLoading"></custom-skeleton-profile1>
+    <custom-profile1 [list]="list" [user]="user" *ngIf="!isLoading"></custom-profile1>
+</ion-content>

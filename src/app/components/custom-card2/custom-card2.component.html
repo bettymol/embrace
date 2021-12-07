@@ -1,0 +1,25 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size-md="6" size="12" *ngFor="let item of list">
+            <ion-card class="ion-no-margin ion-no-padding" [ngClass]="item.color">
+                <ion-item lines="none" class="transparent ion-no-padding ion-no-margin">
+                    <ion-thumbnail>
+                        <img [src]="item.img">
+                    </ion-thumbnail>
+                    <ion-label position="fixed">
+                        <h3>{{item.aiq}}</h3>
+                        <p> CN AQI</p>
+                    </ion-label>
+                    <ion-label class="ion-text-right">
+                        <h4 class="ion-padding-bottom">{{item.status}}</h4>
+                        <ion-badge color="light">{{item.pm}}</ion-badge>
+                    </ion-label>
+                </ion-item>
+                <ion-card-content>
+                    <ion-icon name="arrow-forward" color="warning"></ion-icon>
+                    BECOME CONTRIBUTOR
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

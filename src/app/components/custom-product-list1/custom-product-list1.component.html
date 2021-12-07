@@ -1,0 +1,45 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12">
+            <ion-item lines="none" class="ion-no-padding box-shadow1" *ngFor="let item of list">
+                <ion-thumbnail class="ion-no-padding ion-no-margin">
+                    <img [src]="item.img">
+                </ion-thumbnail>
+                <ion-label class="ion-padding-start">
+                    <h5>{{item.name}}</h5>
+                    <p class="ion-text-wrap ion-padding-top">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.</p>
+                    <p class="price ion-padding-top">${{item.price}}</p>
+                    <ion-item lines="none" class="transparent">
+                        <ion-buttons>
+                            <ion-button (click)="item.isThumbs=!item.isThumbs">
+                                <ng-template [ngIf]="item.isThumbs" [ngIfElse]="thumbs">
+                                    <ion-icon slot="icon-only" size="large" color="warning" name="thumbs-up"></ion-icon>
+                                </ng-template>
+                                <ng-template #thumbs>
+                                    <ion-icon slot="icon-only" size="large" color="secondary"
+                                              name="thumbs-up"></ion-icon>
+                                </ng-template>
+                            </ion-button>
+                            <ion-button (click)="item.isHeart=!item.isHeart">
+                                <ng-template [ngIf]="item.isHeart" [ngIfElse]="heart">
+                                    <ion-icon slot="icon-only" size="large" color="danger"
+                                              name="ios-heart"></ion-icon>
+                                </ng-template>
+                                <ng-template #heart>
+                                    <ion-icon slot="icon-only" size="large" color="warning"
+                                              name="heart-empty"></ion-icon>
+                                </ng-template>
+                            </ion-button>
+                            <ion-button>
+                                <ion-icon slot="icon-only" size="large" color="warning" name="ios-cart"></ion-icon>
+                            </ion-button>
+                        </ion-buttons>
+
+                    </ion-item>
+
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-grid>

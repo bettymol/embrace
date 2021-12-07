@@ -1,0 +1,59 @@
+:host {
+  .cover {
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    overflow: hidden;
+    background-size: cover;
+    background: url('../../../../assets/images/login1.jpg') no-repeat center !important;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+
+    ion-card {
+      margin-top: 170px;
+      box-shadow: unset !important;
+
+      h3, p {
+        color: white !important;
+      }
+    }
+
+    &.active {
+      transform: translateX(100%) !important;
+      -webkit-transform: translateX(100%) !important;;
+    }
+
+  }
+
+  ion-toolbar {
+    --ion-toolbar-background: transparent !important;
+    --border-width: 0px !important;
+    border-bottom: 0px !important;
+  }
+
+  ion-content {
+    --background: var(--my-custom-color3) !important;
+    overflow: hidden;
+  }
+
+
+  .header-md:after {
+    height: 0px !important;
+  }
+
+  ::ng-deep ion-item {
+    --background: #612723 !important;
+  }
+
+  .top-background {
+    height: 200px;
+    position: relative;
+  }
+
+  ion-avatar {
+    margin: -60px auto 20px;
+  }
+}

@@ -1,0 +1,49 @@
+<custom-header [title]="'Home2'" [hidden]="false"></custom-header>
+
+<ion-content>
+    <custom-slides [list]="list" [option]="option"></custom-slides>
+
+    <ion-row>
+        <ion-col size="12" *ngFor="let item of cList">
+            <ion-card class="ion-no-margin ion-no-padding">
+                <img [src]="item.img">
+                <ion-item lines="none" class="transparent ion-no-padding ion-no-margin">
+                    <ion-button fill="clear" slot="start">
+                        <ion-icon name="heart" color="secondary" slot="icon-only"></ion-icon>
+                        <ion-text color="light">99</ion-text>
+                    </ion-button>
+                    <ion-button fill="clear" slot="start">
+                        <ion-icon name="chatbubbles" color="secondary" slot="icon-only"></ion-icon>
+                        <ion-text color="light">199</ion-text>
+                    </ion-button>
+                    <ion-button fill="clear" slot="end">
+                        <ion-icon name="share" color="secondary" slot="icon-only"></ion-icon>
+                        <ion-text color="light">Share</ion-text>
+                    </ion-button>
+                </ion-item>
+                <ion-card-content class="ion-no-padding ion-margin-start">
+                    <h5>{{item.title}}</h5>
+                </ion-card-content>
+                <ion-item lines="none" class="transparent ion-no-padding ion-no-margin">
+                    <ion-avatar>
+                        <img [src]="item.avatar">
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start"><p>{{item.name}}</p></ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-row class="ion-text-center">
+        <ion-col size="6" *ngFor="let item of pList">
+            <ion-card class="transparent">
+                <img [src]="item.img">
+                <h6>{{item.name}}</h6>
+                <p class="price">${{item.price}}</p>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <custom-pagination [pageData]="pageList" (onPage)="onPage($event)"></custom-pagination>
+</ion-content>

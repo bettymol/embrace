@@ -1,0 +1,40 @@
+<custom-header [title]="'Home 5'" [hidden]="false"></custom-header>
+
+
+<ion-content>
+    <custom-slides-animation [pager]="false" [list]="list" [animation]="'cube'"></custom-slides-animation>
+    <ion-row>
+        <ion-col size="4" *ngFor="let item of mList">
+            <ion-card class="ion-text-center menu transparent">
+                <ion-icon color="secondary" size="large" [name]="item.icon"></ion-icon>
+                <p class="ion-no-margin">{{item.name}}</p>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="6" *ngFor="let item of pList">
+            <ion-card class="ion-text-center">
+                <img [src]="item.img">
+                <h5>{{item.title}}</h5>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="12">
+            <h5>Latest News</h5>
+        </ion-col>
+        <ion-col size="12">
+            <ion-item lines="none" *ngFor="let item of nList" class="ion-no-padding box-shadow1">
+                <ion-thumbnail>
+                    <img [src]="item.img">
+                </ion-thumbnail>
+                <ion-label class="ion-margin-start">
+                    <p class="ion-text-wrap">{{item.title}}</p>
+                    <p class="small ion-padding-top">Feb 25, 2019</p>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-content>

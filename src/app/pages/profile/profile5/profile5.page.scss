@@ -1,0 +1,20 @@
+:host {
+  ion-content {
+  }
+
+  ion-toolbar {
+    --ion-toolbar-background: transparent !important;
+    --border-width: 0px !important;
+    border-bottom: 0px !important;
+
+    &.active {
+      background: var(--ion-color-primary) !important;
+    }
+  }
+
+  .header-md:after {
+    height: 0px !important;
+  }
+
+
+}

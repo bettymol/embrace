@@ -1,0 +1,39 @@
+:host {
+  .background-size {
+    height: 300px;
+  }
+
+  .overflow {
+    overflow: visible;
+  }
+
+  .avatar {
+    margin: -55px auto;
+  }
+
+  h3 {
+    padding-top: 50px;
+    color: white;
+  }
+
+  ion-badge {
+    width: 90px;
+  }
+
+  .line {
+    border: 0;
+    height: 1px;
+    background: #444;
+    background: -webkit-linear-gradient(left, hsla(0, 0%, 0%, 0) 0%, rgb(188, 198, 214) 50%, hsla(0, 0%, 0%, 0) 100%);
+  }
+
+  ion-item {
+    --inner-padding-end: 0px !important;
+  }
+
+  custom-skeleton-img {
+    min-height: 260px;
+    width: 100%;
+  }
+
+}

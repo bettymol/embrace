@@ -1,0 +1,20 @@
+:host {
+  ion-tabs {
+    background: var(--my-custom-color) !important;
+  }
+
+  ion-tab-bar {
+    --background: var(--ion-color-secondary);
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+  }
+
+  .tab-selected {
+    color: var(--ion-color-primary-contrast);
+  }
+
+  .fab-bottom {
+    margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+  }
+}

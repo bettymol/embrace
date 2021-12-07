@@ -1,0 +1,28 @@
+<ion-content fullscreen>
+    <div class="cover" [class.active]="active">
+        <ion-card class="transparent ion-text-center">
+            <h3>Welcome Back</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est. </p>
+            <ion-card-content>
+                <ion-button expand="block" color="favorite" (click)="toggle()">Sign Up</ion-button>
+            </ion-card-content>
+        </ion-card>
+    </div>
+
+    <div class="top-background background-size" [ngStyle]="{'background-image':'url('+img+')'}">
+        <ion-header>
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-menu-button></ion-menu-button>
+                </ion-buttons>
+                <ion-title></ion-title>
+            </ion-toolbar>
+        </ion-header>
+    </div>
+    <ion-col size="12" size-md="8" class="ion-text-center">
+        <ion-avatar>
+            <img src="assets/images/starbucks.png"/>
+        </ion-avatar>
+    </ion-col>
+    <custom-sign-up2></custom-sign-up2>
+</ion-content>

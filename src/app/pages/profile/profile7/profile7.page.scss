@@ -1,0 +1,33 @@
+:host {
+  ion-toolbar {
+    transition: ease all 0.5s;
+    -webkit-transition: ease all 0.5s;
+    border-bottom: 0px !important;
+    ion-buttons {
+      opacity: 1;
+      display: flex;
+    }
+
+    ion-segment {
+      opacity: 0;
+      display: none;
+    }
+
+    &.active {
+      ion-segment {
+        opacity: 1;
+        display: flex;
+      }
+
+      ion-buttons {
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+
+  ion-segment-button {
+    color: white !important;
+  }
+
+}

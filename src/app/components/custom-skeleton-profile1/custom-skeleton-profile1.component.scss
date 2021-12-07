@@ -1,0 +1,27 @@
+:host {
+  ion-card {
+    border-radius: 0px !important;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+  }
+
+  ion-avatar {
+    margin: 60px auto;
+  }
+
+  ion-badge {
+    width: 110px;
+    margin: 0 auto;
+  }
+
+  ion-item {
+    margin: 0px !important;
+    border-radius: 0px !important;
+    -border-color: var(--my-custom-color2) !important;
+    --background: #7a2c9a;
+  }
+
+  ion-skeleton-text {
+    --background-rgb: 255, 255, 0;
+  }
+}

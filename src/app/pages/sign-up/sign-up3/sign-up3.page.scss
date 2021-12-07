@@ -1,0 +1,34 @@
+:host {
+  video {
+    position: fixed;
+  }
+
+  ion-toolbar {
+    border-bottom: 0px !important;
+  }
+
+  ion-toolbar:last-child {
+    --border-width: 0px !important;
+  }
+
+  .header-md:after {
+    height: 0px !important;
+  }
+
+  ion-icon {
+    will-change: transform;
+    transition: transform 500ms ease;
+
+    &.active {
+      -webkit-transform: rotate(-180deg);
+      -moz-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+      -o-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+  }
+
+  ::ng-deep ion-item {
+    --background: #787373a6 !important;
+  }
+}

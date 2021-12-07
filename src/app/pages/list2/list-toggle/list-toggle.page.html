@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Toggle List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<custom-list-toggle [list]="list" (onToggle)="onToggle($event)"></custom-list-toggle>
+</ion-content>

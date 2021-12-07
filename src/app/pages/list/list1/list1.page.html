@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Search List
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="toggle()">
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+            <ion-button (click)="onOpenCart()">
+                <ion-icon slot="icon-only" name="ios-cart"></ion-icon>
+                <ion-badge color="danger">{{cartNum}}</ion-badge>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar class="searchTool" [class.active]="active">
+        <ion-range min="20" max="200" step="10" dual-knobs pin snaps="true" ticks="true"
+                   [value]="{lower: 50, upper: 150}" color="warning" (ionChange)="ionChange($event)">
+            <ion-icon slot="start" size="small" name="logo-usd"></ion-icon>
+            <ion-icon slot="end" name="logo-usd"></ion-icon>
+        </ion-range>
+        <ion-searchbar color="light" class="ion-no-padding ion-no-margin"
+                       (ionInput)="onSearch($event)"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+        <ng-container *ngFor="let item of list1; index as index">
+             <span class="move-cart" (@flyInCart.start)="animationStart($event)"
+                   (@flyInCart.done)="animationDone($event)" [@flyInCart]="'in'">
+             <ion-icon name="ios-cart" color="light" size="large"></ion-icon>
+        </span>
+        </ng-container>
+
+    <custom-product-list [list]="list" (click)="onClick($event)"></custom-product-list>
+    <custom-pagination [pageData]="pageList" (onPage)="onPage($event)"></custom-pagination>
+</ion-content>

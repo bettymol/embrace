@@ -1,0 +1,71 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="background-size ion-no-padding filter"
+                 [ngStyle]="{'background-image':'url('+user.backImg+')'}"></ion-col>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-margin ion-padding ion-text-center overflow">
+                <ion-avatar class="avatar">
+                    <img class="filter" [src]="user.img">
+                </ion-avatar>
+                <h3>
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 39%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 69%"></ion-skeleton-text>
+                    </ion-label>
+                </h3>
+                <p>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 37%"></ion-skeleton-text>
+                </p>
+                <ion-badge color="favorite" class="ion-no-padding">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-badge>
+                <div class="line"></div>
+                <ion-row>
+                    <ion-col size="4">
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 25%"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 25%"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 25%"></ion-skeleton-text>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+
+            <ion-card *ngFor="let item of list">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-avatar slot="start">
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 25%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-skeleton-text slot="end" animated style="width: 5%"></ion-skeleton-text>
+                </ion-item>
+                <custom-skeleton-img></custom-skeleton-img>
+                <ion-card-content>
+                    <ion-skeleton-text animated style="width: 86%"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 96%"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 65%"></ion-skeleton-text>
+                </ion-card-content>
+                <ion-row>
+                    <ion-col size="4">
+                        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="4">
+                        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                    </ion-col>
+                    <ion-col size="4" class="">
+                        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

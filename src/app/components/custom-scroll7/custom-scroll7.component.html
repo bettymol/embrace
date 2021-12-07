@@ -1,0 +1,23 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-item lines="none" class="ion-no-padding box-shadow1" *ngFor="let item of list">
+                <ion-thumbnail class="ion-no-padding ion-no-margin">
+                    <img [src]="item.img">
+                </ion-thumbnail>
+                <ion-label class="ion-padding-start">
+                    <h5 class="ion-text-wrap">{{item.name}}</h5>
+                    <p class="ion-text-wrap ion-padding-top">Lorem ipsum dolor sit amet</p>
+
+                    <ion-item lines="none" class="transparent ion-no-margin ion-no-padding">
+                        <ion-label>
+                            <p class="price ion-padding-top">${{item.price}}</p>
+                        </ion-label>
+                        <custom-stepper slot="end" [numbers]="item.numbers"
+                                        (onChange)="onChange( $event,item)"></custom-stepper>
+                    </ion-item>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-grid>

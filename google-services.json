@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122711361516",
+    "project_id": "embrace-de502",
+    "storage_bucket": "embrace-de502.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122711361516:android:3131cc770605b17f6162c9",
+        "android_client_info": {
+          "package_name": "net.global_horizon.embrace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122711361516-rcl56gp31apu83jer4hraj3rd327qd67.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDk-rVsj3IcrK4AKjaHxtoZUKG3HDcLt0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122711361516-rcl56gp31apu83jer4hraj3rd327qd67.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,42 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list;let i=index">
+            <ion-card class="ion-no-margin ion-no-padding">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-avatar>
+                        <img [src]="item.avatar">
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h4>
+                            {{item.name}}
+                        </h4>
+                        <p class="ion-text-left small">{{item.date}}</p>
+                    </ion-label>
+                    <ion-icon name="more" color="light"></ion-icon>
+                </ion-item>
+                <p class="ion-padding-start ion-no-margin">{{item.content}}</p>
+                <ion-slides [pager]="false" [options]="i%2===0?option:option1">
+                    <ion-slide *ngFor="let slide of item.slides">
+                        <img [src]="slide">
+                    </ion-slide>
+                </ion-slides>
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-buttons slot="end">
+                        <ion-button>
+                            <ion-icon name="heart" size="large" color="danger"></ion-icon>
+                            <ion-text color="light">{{item.heart}}</ion-text>
+                        </ion-button>
+                        <ion-button>
+                            <ion-icon name="ios-chatbubbles" size="large" color="light"></ion-icon>
+                            <ion-text color="light">{{item.chat}}</ion-text>
+                        </ion-button>
+                        <ion-button>
+                            <ion-icon name="thumbs-up" size="large" color="light"></ion-icon>
+                            <ion-text color="light">{{item.chat}}</ion-text>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

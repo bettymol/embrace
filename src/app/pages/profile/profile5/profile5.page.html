@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar [class.active]="isActive">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Scroll Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" [scrollEvents]="true"
+             (ionScroll)="onScroll($event)">
+
+    <custom-skeleton-profile5 [list]="list" [user]="user" *ngIf="isLoading"></custom-skeleton-profile5>
+    <custom-profile5 [user]="user" [list]="list" *ngIf="!isLoading"></custom-profile5>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button color="warning" [ngClass]="isEnd?'fade-in-right':'fade-out-right'" (click)="goTop()">
+            <ion-icon name="md-arrow-up"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

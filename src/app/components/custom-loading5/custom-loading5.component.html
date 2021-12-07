@@ -1,0 +1,50 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-item lines="none" class="ion-no-padding">
+                <ion-label position="fixed" class="ion-no-margin left">
+                    <ion-card class="ion-no-margin ion-text-center no-border-right-radius" [ngClass]="item.color">
+                        <ion-card-header class="ion-no-padding">
+                            <ion-item lines="none" class="ion-no-margin ion-no-padding no-border-radius"
+                                      [ngClass]="item.color1">
+                                <ion-icon slot="start" class="margin1" name="cloud" color="light"></ion-icon>
+                                <ion-label class="ion-text-right margin2"><h5>{{item.temp}}</h5></ion-label>
+                            </ion-item>
+                        </ion-card-header>
+                        <h4 class="ion-padding-top">{{item.status}}</h4>
+                        <img [src]="item.img">
+                        <h3>{{item.aiq}}</h3>
+                        <p>{{item.country}}</p>
+                    </ion-card>
+                </ion-label>
+                <ion-label class="ion-no-margin">
+                    <ion-card class="ion-no-margin no-border-left-radius" [ngClass]="item.color2">
+                        <ion-card-header class="ion-no-padding">
+                            <ion-item lines="none">
+                                <ion-label class="ion-no-margin">
+                                    <h4>{{item.city}}</h4>
+                                    <p>{{item.city}},{{item.country}}</p>
+                                </ion-label>
+                                <ion-icon slot="end" name="ios-send" color="light" size="large"></ion-icon>
+                            </ion-item>
+                        </ion-card-header>
+                        <ion-item lines="none">
+                            <ion-label *ngFor="let week of item.week">
+                                <h5>{{week.name}} </h5>
+                                <ion-badge [color]="week.color">{{week.aiq}}</ion-badge>
+                                <p class="weather">
+                                    <ion-icon [name]="week.icon" size="large" color="light"></ion-icon>
+                                    {{week.temp}}
+                                </p>
+                            </ion-label>
+                        </ion-item>
+                        <ion-item lines="none" class="bottom ion-text-center">
+                            <ion-label><p>{{item.date}}</p></ion-label>
+                            <ion-icon name="ios-arrow-forward" slot="end" color="light"></ion-icon>
+                        </ion-item>
+                    </ion-card>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-grid>

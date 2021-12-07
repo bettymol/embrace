@@ -1,0 +1,40 @@
+
+
+<ion-content fullscreen>
+    <div class="main-content">
+        
+        
+               <ion-row class="row">
+                <h3>LOGIN</h3>
+            <ion-col size="12" >
+                
+                    <ion-card class="transparent">
+                        <ion-item lines="none">
+                            
+                            <ion-input  [(ngModel)]="logdata.username" placeholder="User Name"  type="text"></ion-input>
+                        </ion-item>
+                        
+                        <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="logdata.password" placeholder="Password" type="text"></ion-input>
+                        </ion-item>
+                        
+                    </ion-card>
+                
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" >
+                <ion-button expand="block" (click)="login()">Login
+                </ion-button>
+                 
+            </ion-col>
+
+        </ion-row>
+      
+                    <ion-text  style="float: right;margin-right: 30px"   (click)="register()" color="warning" ><h5>Register Now</h5></ion-text>
+            
+              
+            
+    </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-card class="ion-no-margin ion-no-padding" [class.active]="item.active">
+                <div>
+                    <div class="left">
+                        <img [src]="item.img">
+                        <ion-badge class="transparent ion-no-padding star">
+                            <ion-icon name="star" color="danger" *ngFor="let star of item.star"></ion-icon>
+                        </ion-badge>
+                    </div>
+                    <div class="right">
+                        <ion-card-header class="ion-no-padding">
+                            <hr class="line"/>
+                            <h5 class="title">{{item.title}}</h5>
+                        </ion-card-header>
+                        <ion-badge class="transparent">
+                            <img src="assets/images/fresh.png" style="width: 39px"> <h4>{{item.percent}}</h4>
+                        </ion-badge>
+                        <ion-item lines="none" class="ion-no-padding ion-no-margin transparent">
+                            <ion-label class="ion-no-margin">
+                                <p>Total Count: {{item.count}}</p>
+                                <p>Date: <strong>{{item.date}}</strong></p>
+                            </ion-label>
+                        </ion-item>
+                    </div>
+                </div>
+                <div class="tool">
+                    <ion-button class="btn" color="secondary" (click)="item.active=!item.active">
+                        {{item.active ? 'close' : 'more'}}
+                    </ion-button>
+                </div>
+                <ion-card-content>
+                    <ion-badge class="transparent ion-no-padding">
+                        <img src="assets/images/fresh.png" style="width: 39px"> <h4>{{item.percent}}</h4>
+                    </ion-badge>
+                    <p>Average Rating: <strong>{{item.rating}}</strong></p>
+                    <p>Total Count: <strong>{{item.count}}</strong></p>
+                    <p>{{item.content}}</p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Shopping Cart+Animation</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <custom-scroll7 [list]="list" (click)="onClick($event)"></custom-scroll7>
+    <div class="screen_cover" *ngIf="isShow"></div>
+    <ion-card class="ion-no-margin no-border-radius cart" [@cartState]="cartState" *ngIf="isShow">
+        <ion-item class="ion-no-margin ion-no-padding no-border-radius" color="dark">
+            <ion-label class="ion-padding-start">
+                <h5>Bags</h5>
+            </ion-label>
+            <ion-button slot="end" color="favorite">Clear</ion-button>
+        </ion-item>
+        <ion-item lines="none" class="transparent ion-no-margin" *ngFor="let item of cList">
+            <ion-thumbnail>
+                <img [src]="item.img">
+            </ion-thumbnail>
+            <ion-label class="ion-padding-start">
+                <ion-text color="dark">{{item.name}}</ion-text>
+                <p class="price">${{item.price}}</p>
+            </ion-label>
+            <ion-text color="dark" slot="end">×{{item.numbers}}</ion-text>
+        </ion-item>
+    </ion-card>
+
+    <ng-container *ngFor="let item of list1; index as index">
+         <span class="move-cart" (@flyInCart.start)="animationStarted($event)"
+               (@flyInCart.done)="animationDone($event)" [@flyInCart]="'in'">
+         <ion-icon name="ios-cart" color="favorite" size="large"></ion-icon>
+    </span>
+    </ng-container>
+
+</ion-content>
+<ion-footer>
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed" class="fab-bottom">
+        <ion-fab-button color="warning" [ngClass]="isAdd?'scale-cart':'no-cart'" (click)="onShow()">
+            <ion-icon name="ios-cart" size="large" color="favorite"></ion-icon>
+        </ion-fab-button>
+        <ion-badge class="badge" color="danger">{{total}}</ion-badge>
+    </ion-fab>
+    <ion-item lines="none" class="transparent">
+        <ion-button slot="end" color="favorite" class="btn-default">Ok</ion-button>
+    </ion-item>
+</ion-footer>

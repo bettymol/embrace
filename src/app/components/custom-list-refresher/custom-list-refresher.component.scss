@@ -1,0 +1,22 @@
+:host {
+  .read {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--ion-color-success);
+    margin-top: 5px;
+    align-self: start;
+    position: absolute;
+    z-index: 9;
+  }
+
+  ion-thumbnail {
+    width: 139px;
+    height: 100%;
+  }
+
+  .star {
+    position: absolute;
+    bottom: 0px;
+  }
+}

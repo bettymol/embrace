@@ -1,0 +1,55 @@
+<ion-app>
+    
+        
+    
+        <ion-split-pane contentId="main-content">
+        <ion-menu contentId="main-content" type="overlay">
+            <ion-content>
+                <div class="profile">
+                    <ion-avatar >
+                        <img src="assets/images/embracelogo.png">
+                    </ion-avatar>
+                    <h2 class="name">Embrace</h2>
+                </div>
+               
+               <ion-list lines="none" class="accordion-menu">
+            
+    <ng-template  ngFor let-item [ngForOf]="authService.results.menu">
+      
+      
+            <ion-menu-toggle  auto-hide="false">
+                <ion-item   (click)="tabclick(item?.menglish,item?.menuurl)"  class="header" [routerDirection]="'root'">
+                      <!--<ion-avatar  style="padding-right: 5px; height:25px;width:25px;">
+                <img [src]="item?.icon">
+            </ion-avatar>-->
+               
+
+                    <ion-label>
+                        {{item?.menglish}}
+
+                    
+                
+                    </ion-label>
+                    
+                    
+                     
+                </ion-item>
+                
+            </ion-menu-toggle>
+       
+     
+    </ng-template>
+    <ion-item   (click)="logout()"  class="header" >
+                    <ion-label>
+                       Logout
+                    </ion-label>
+    </ion-item>
+</ion-list>
+
+            </ion-content>
+        </ion-menu>
+        
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+
+</ion-app>

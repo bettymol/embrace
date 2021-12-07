@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #FFF;">
+	<ion-searchbar placeholder="Search..." [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+  <ion-row >
+    
+    <ion-col   style="--background: #FFF;" size="12" >
+      
+        <ion-card class="ion-no-margin">
+          <ion-item lines="none" class="slide-bottom1" *ngFor="let msg of messages.message|filter:filterTerm" >
+          	<!--category,subcategory,Description,Quantity,Color,Status,Note,Picture,user_con,IsActive,created-->
+          	
+           <ion-label class="ion-padding-start">
+                     <p class="ion-text-uppercase">{{msg.Title}}</p>   <p class="ion-text-uppercase">{{msg.Created}}</p>
+           
+                        <p class="ion-text-uppercase">{{msg.Message}}</p>
+                       
+          
+           <p>
+
+          
+          </p>
+           </ion-label>
+          </ion-item>
+           
+           
+        </ion-card>
+      
+    </ion-col>
+  </ion-row>
+      
+</ion-content>

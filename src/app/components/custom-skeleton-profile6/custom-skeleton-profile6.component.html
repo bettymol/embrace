@@ -1,0 +1,111 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-margin ion-padding ion-text-center top-card">
+                <ion-thumbnail>
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-thumbnail>
+                <h4>
+                    <ion-badge class="transparent ion-no-padding" style="width: 120px">
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-badge>
+                </h4>
+                <ion-badge class="transparent" style="width: 100px">
+                    <ion-skeleton-text animated></ion-skeleton-text>
+                </ion-badge>
+                <ion-item lines="none" class="ion-no-padding ion-no-margin transparent overflow">
+                    <ion-icon name="camera" color="medium"></ion-icon>
+                    <ion-label class="ion-padding-start">
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-avatar slot="end" class="color1 like">
+                        <ion-icon name="mail" size="large" color="medium"></ion-icon>
+                    </ion-avatar>
+                    <ion-avatar slot="end" class="color2 like">
+                        <ion-icon name="heart" size="large" color="medium"></ion-icon>
+                    </ion-avatar>
+                </ion-item>
+            </ion-card>
+
+            <ion-item lines="none" style="margin-top: 65px">
+                <ion-icon name="happy" size="large" color="medium"></ion-icon>
+                <div class="line"></div>
+                <ion-label class="ion-padding-start">
+                    <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 95%"></ion-skeleton-text>
+                    <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-icon name="people" size="large" color="medium"></ion-icon>
+                <div class="line"></div>
+                <ion-label class="ion-padding-start">
+                    <ion-skeleton-text animated style="width: 45%"></ion-skeleton-text>
+                    <ion-row>
+                        <ion-col size="12" style="display: flex;flex-direction: row;">
+                            <ion-avatar>
+                                <ion-skeleton-text animated></ion-skeleton-text>
+                            </ion-avatar>
+                            <ion-avatar>
+                                <ion-skeleton-text animated></ion-skeleton-text>
+                            </ion-avatar>
+                            <ion-avatar>
+                                <ion-skeleton-text animated></ion-skeleton-text>
+                            </ion-avatar>
+                            <ion-avatar>
+                                <ion-skeleton-text animated></ion-skeleton-text>
+                            </ion-avatar>
+                            <ion-avatar>
+                                <ion-skeleton-text animated></ion-skeleton-text>
+                            </ion-avatar>
+                        </ion-col>
+                    </ion-row>
+                    <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-icon name="paw" size="large" color="medium"></ion-icon>
+                <div class="line"></div>
+                <ion-label class="ion-padding-start">
+                    <ion-skeleton-text animated style="width: 50%;"></ion-skeleton-text>
+                    <p>
+                        <ion-badge color="medium">
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-badge>
+                        <ion-badge color="medium">
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-badge>
+                        <ion-badge color="medium">
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-badge>
+                        <ion-badge color="medium">
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-badge>
+                    </p>
+                    <p>
+                        <ion-badge color="medium">
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-badge>
+                        <ion-badge color="medium">
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-badge>
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12" class="ion-no-padding" *ngFor="let item of list">
+            <ion-card>
+                <custom-skeleton-img></custom-skeleton-img>
+                <ion-item lines="none" class="ion-no-margin no-border-radius color3">
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                        <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-icon name="more" slot="end" color="medium"></ion-icon>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

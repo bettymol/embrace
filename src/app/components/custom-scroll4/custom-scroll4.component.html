@@ -1,0 +1,56 @@
+<ion-grid class="ion-no-padding">
+    <ion-row class="background-size top-back" [ngStyle]="{'background-image':'url('+img+')'}"></ion-row>
+    <ion-row>
+        <ion-col size="12">
+            <ion-card class="ion-text-center ion-padding user-card">
+                <ion-avatar class="user-avatar">
+                    <img [src]="user.avatar">
+                </ion-avatar>
+                <h4>{{user.name}}</h4>
+                <p>
+                    <ion-icon name="female" color="danger"></ion-icon>
+                    {{user.location}}</p>
+                <ion-card-content>
+                    <ion-row class="ion-text-center">
+                        <ion-col size="6">
+                            <ion-button expand="block" class="btn-default" color="favorite">Follows</ion-button>
+                            <p>{{user.follows}}</p>
+                        </ion-col>
+                        <ion-col size="6">
+                            <ion-button expand="block" class="btn-default" color="secondary">Following</ion-button>
+                            <p>{{user.following}}</p>
+                        </ion-col>
+                    </ion-row>
+                </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-label><h5>Photos</h5></ion-label>
+                    <ion-button slot="end" fill="clear" class="ion-no-padding" (click)="photos()">
+                        <ion-icon name="more" color="light" slot="icon-only"></ion-icon>
+                    </ion-button>
+
+                </ion-item>
+                <custom-slides [list]="user.photos" [option]="option"></custom-slides>
+            </ion-card>
+            <ion-card>
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-label><h5>Friends</h5></ion-label>
+                    <ion-icon name="more" color="light" slot="end"></ion-icon>
+                </ion-item>
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-avatar slot="start" *ngFor="let item of user.friends">
+                        <img [src]="item">
+                    </ion-avatar>
+                </ion-item>
+            </ion-card>
+            <ion-card>
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-label><h5>Favorite</h5></ion-label>
+                    <ion-icon name="more" color="light" slot="end"></ion-icon>
+                </ion-item>
+                <custom-slides [list]="user.favorite" [option]="option1"></custom-slides>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

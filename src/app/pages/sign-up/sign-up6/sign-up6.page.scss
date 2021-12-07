@@ -1,0 +1,11 @@
+:host {
+  ion-content {
+    overflow: hidden;
+    --background: #bf4e7c !important;
+  }
+
+  ion-toolbar {
+    --ion-toolbar-background: linear-gradient(to right, #7b294a 0%, #d93e76 0%, #b80646 21%, #df6798 52%, #e06396 78%, #d44c7d 100%) !important;
+    border-bottom: 0px !important;
+  }
+}

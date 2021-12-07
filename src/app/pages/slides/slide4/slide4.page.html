@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Fade Slides</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-slides-animation [list]="list" [animation]="'fade'"></custom-slides-animation>
+    <custom-slides-animation [list]="list" [animation]="'flip'"></custom-slides-animation>
+</ion-content>

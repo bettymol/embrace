@@ -1,0 +1,22 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12">
+            <ion-card *ngFor="let item of list">
+                <ion-avatar>
+                    <img [src]="item.avatar">
+                </ion-avatar>
+                <ion-item lines="none" class="ion-no-margin">
+                    <ion-label class="ion-padding-start">
+                        <h4>{{item.name}}</h4>
+                        <h5 class="ion-text-wrap ion-padding-start">{{item.title}}</h5>
+                        <p class="ion-text-wrap ion-padding-top">Fusce at quam a eros malesuada condimentum</p>
+                    </ion-label>
+                    <ion-thumbnail>
+                        <img [src]="item.img">
+                        <ion-icon name="heart" color="danger" size="large"></ion-icon>
+                    </ion-thumbnail>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

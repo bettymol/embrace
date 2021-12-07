@@ -1,0 +1,11 @@
+:host {
+  ion-toolbar {
+    --ion-toolbar-background: transparent !important;
+    --border-width: 0px !important;
+    border-bottom: 0px !important;
+  }
+
+  .header-md:after {
+    height: 0px !important;
+  }
+}

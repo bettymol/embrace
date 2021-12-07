@@ -1,0 +1,62 @@
+<custom-header [title]="'Home 6'" [hidden]="false"></custom-header>
+
+<ion-content>
+    <custom-slides-animation [list]="list"></custom-slides-animation>
+    <ion-row>
+        <ion-col size="12">
+            <ion-item lines="none" class="transparent">
+                <ion-buttons slot="end">
+                    <ion-button class="ion-no-padding" (click)="onToggle('list')">
+                        <ion-icon name="ios-list" color="warning" slot="icon-only" size="large"></ion-icon>
+                    </ion-button>
+                    <ion-button class="ion-no-padding" (click)="onToggle('table')">
+                        <ion-icon name="ios-keypad" color="warning" slot="icon-only" size="large"></ion-icon>
+                    </ion-button>
+                    <ion-button class="ion-no-padding" (click)="onToggle('card')">
+                        <ion-icon name="ios-expand" color="warning" slot="icon-only" size="large"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-item>
+        </ion-col>
+
+
+        <ng-container [ngSwitch]="display">
+            <ng-template [ngSwitchCase]="'list'">
+                <ion-col size="12" class="slide-in-left">
+                    <ion-item lines="none" *ngFor="let item of pList" class="ion-no-padding box-shadow1">
+                        <ion-thumbnail>
+                            <img [src]="item.img">
+                        </ion-thumbnail>
+                        <ion-label class="ion-padding-start">
+                            <h5>{{item.name}}</h5>
+                            <p class="price ion-padding-top">${{item.price}}</p>
+                        </ion-label>
+                    </ion-item>
+                </ion-col>
+            </ng-template>
+            <ng-template [ngSwitchCase]="'table'">
+                <ion-col size="6" *ngFor="let item of pList" class="slide-in-left">
+                    <ion-card class="ion-no-margin ion-text-center">
+                        <img [src]="item.img">
+                        <h5>{{item.name}}</h5>
+                        <p class="price ion-text-right">${{item.price}}</p>
+                    </ion-card>
+                </ion-col>
+            </ng-template>
+            <ng-template [ngSwitchCase]="'card'">
+                <ion-col size="12" *ngFor="let item of pList" class="slide-in-left">
+                    <ion-card class="ion-no-margin">
+                        <img [src]="item.img">
+                        <ion-card-content>
+                            <ion-item lines="none">
+                                <ion-label><h4>{{item.name}}</h4></ion-label>
+                                <ion-label position="fixed" class="ion-text-right"><p class="price">${{item.price}}</p>
+                                </ion-label>
+                            </ion-item>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-col>
+            </ng-template>
+        </ng-container>
+    </ion-row>
+</ion-content>

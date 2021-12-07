@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+                <ion-icon slot="icon-only" name="options"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+    <custom-skeleton-profile6 [user]="user" [list]="list" *ngIf="isLoading"></custom-skeleton-profile6>
+    <custom-profile6 [user]="user" [list]="list" *ngIf="!isLoading"></custom-profile6>
+</ion-content>

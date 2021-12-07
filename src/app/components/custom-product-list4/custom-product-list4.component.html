@@ -1,0 +1,38 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-card class="ion-no-padding ion-no-margin">
+                <ion-item lines="none" class="ion-no-margin">
+                    <ion-avatar slot="start">
+                        <img [src]="item.avatar">
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h5 class="ion-text-wrap">{{item.name}}</h5>
+                        <p>{{item.date}}</p>
+                    </ion-label>
+                    <ion-buttons slot="end">
+                        <ion-button>
+                            <ion-icon name="heart" color="danger" slot="icon-only" size="large"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-item>
+                <ion-item lines="none" class="ion-no-margin ion-no-padding">
+                    <ion-label class="ion-margin-start">
+                        <h4>{{item.title}}</h4>
+                        <p class="ion-text-wrap"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros
+                            est.</p>
+                    </ion-label>
+                </ion-item>
+                <img [src]="item.img">
+                <ion-item lines="none" class="ion-text-center">
+                    <ion-icon name="eye" color="warning"></ion-icon>
+                    <ion-text color="light" class="ion-margin-end">299</ion-text>
+                    <ion-icon name="repeat" color="warning"></ion-icon>
+                    <ion-text color="light" class="ion-margin-end">99</ion-text>
+                    <ion-icon name="chatbubbles" color="warning"></ion-icon>
+                    <ion-text color="light">23</ion-text>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

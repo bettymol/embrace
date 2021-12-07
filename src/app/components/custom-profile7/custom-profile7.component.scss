@@ -1,0 +1,24 @@
+:host {
+  ::ng-deep .slide ion-card {
+    width: 200px !important;
+    height: auto !important;
+    border-radius: 12px !important;
+  }
+
+  h4, h5 {
+    color: white !important;
+  }
+
+  ion-item {
+    --inner-padding-end: 0px !important;
+  }
+
+  span {
+    margin-right: 10px;
+    margin-left: 3px;
+  }
+
+  ion-badge {
+    padding: 5px;
+  }
+}

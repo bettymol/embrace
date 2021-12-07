@@ -1,0 +1,25 @@
+:host {
+  .left {
+    max-width: 150px;
+    margin-right: 9px;
+    float: left;
+  }
+
+  .right {
+    float: left;
+    width: calc(100% - 162px);
+  }
+
+  ion-avatar {
+    height: 45px;
+    width: 45px;
+    border: 0px;
+    margin: 20px 10px 40px 10px;
+  }
+
+  custom-skeleton-img {
+    min-width: 150px;
+    min-height: 209px;
+  }
+
+}

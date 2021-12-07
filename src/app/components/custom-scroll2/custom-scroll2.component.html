@@ -1,0 +1,28 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-card class="ion-no-margin ion-no-padding">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-avatar>
+                        <img [src]="item.avatar">
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h4>
+                            {{item.name}}
+                        </h4>
+                        <p class="ion-text-left small">{{item.date}}</p>
+                    </ion-label>
+                    <ion-icon name="more" color="light"></ion-icon>
+                </ion-item>
+                <p class="ion-padding-start ion-no-margin">{{item.content}}</p>
+                <img [src]="item?.img">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-icon name="heart" color="light"></ion-icon>
+                    <ion-text color="light">{{item.heart}}</ion-text>
+                    <ion-icon name="ios-chatbubbles" color="light"></ion-icon>
+                    <ion-text color="light">{{item.chat}}</ion-text>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

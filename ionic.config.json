@@ -1,0 +1,7 @@
+{
+  "name": "net.global_horizon.embrace",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

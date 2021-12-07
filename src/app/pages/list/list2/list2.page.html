@@ -1,0 +1,11 @@
+<custom-header1 [title]="'Infinite Scroll List'" (onSearch)="onSearch($event)"></custom-header1>
+
+<ion-content>
+    <custom-product-list1 [list]="list"></custom-product-list1>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+                loadingSpinner="bubbles"
+                loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

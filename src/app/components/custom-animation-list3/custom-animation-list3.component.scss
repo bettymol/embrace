@@ -1,0 +1,14 @@
+:host {
+  ion-item {
+    --inner-padding-end: 0px;
+  }
+
+  ion-thumbnail {
+    width: 150px;
+    height: 100%;
+  }
+
+  ion-badge {
+    margin-right: 5px;
+  }
+}

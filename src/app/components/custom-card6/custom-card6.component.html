@@ -1,0 +1,36 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-slides pager="true">
+                <ion-slide *ngFor="let child of item.childs">
+                    <ion-card class="ion-no-margin">
+                        <img [src]="child.img">
+                        <ion-card-content class="ion-no-padding">
+                            <h3>{{child.title}}</h3>
+                            <ion-icon *ngFor="let star of child.stars" [name]="star" color="warning"></ion-icon>
+                            <p>{{child.content}}</p>
+                            <ion-item lines="none" class="transparent">
+                                <ion-chip>
+                                    <ion-icon name="thumbs-up" size="large" color="danger"></ion-icon>
+                                    <p>97</p>
+                                </ion-chip>
+                                <ion-chip>
+                                    <ion-icon name="eye" size="large" color="danger"></ion-icon>
+                                    <p>999</p>
+                                </ion-chip>
+                                <ion-chip>
+                                    <ion-icon name="chatboxes" size="large" color="danger"></ion-icon>
+                                    <p>22</p>
+                                </ion-chip>
+                                <ion-chip>
+                                    <ion-icon name="heart" size="large" color="danger"></ion-icon>
+                                    <p>79</p>
+                                </ion-chip>
+                            </ion-item>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,29 @@
+:host{
+  ion-row {
+    background: transparent !important;
+    margin: 8px !important;
+  }
+
+  .logo {
+    width: 90px;
+    margin-top: 20px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  ion-card {
+    padding-top: 10px;
+    background: var(--my-card-background) !important;
+  }
+
+  ion-item {
+    border-radius: 10px;
+    --border-color: white !important;
+  }
+
+  ion-input {
+    color: var(--ion-color-primary-contrast) !important;
+  }
+}

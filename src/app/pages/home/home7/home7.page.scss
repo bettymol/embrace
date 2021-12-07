@@ -1,0 +1,25 @@
+:host {
+  ::ng-deep.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: rgb(46, 204, 27);
+  }
+
+  ion-segment-button {
+    color: white !important;
+  }
+
+  ion-col:nth-child(odd) {
+    ion-card {
+      margin: 5px 0px 5px 8px;
+    }
+  }
+
+  ion-col:nth-child(even) {
+    ion-card {
+      margin: 5px 8px 5px 0px;
+    }
+  }
+
+  ion-avatar {
+    margin: 10px auto;
+  }
+}

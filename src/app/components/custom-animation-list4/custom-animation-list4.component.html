@@ -1,0 +1,33 @@
+<div class="container">
+    <!--        left cate-->
+    <div class="cate-left">
+        <div class="cate-left-item" [class.selected]="cate===selectedCate"
+             *ngFor="let cate of cateList" (click)="onSelect(cate)">
+            <ng-template [ngIf]="cate===selectedCate" [ngIfElse]="noSelected">
+                <span>{{cate}}</span>
+                <i class="selected-line"></i>
+            </ng-template>
+            <ng-template #noSelected>
+                <span>{{cate}}</span>
+            </ng-template>
+        </div>
+    </div>
+
+    <div class="cate-right">
+        <div>
+            <ion-row class="ion-margin">
+                <ion-col class="ion-no-padding" size="5.5" *ngFor="let item of list;let i=index"
+                         [classList]="animationClassName"
+                         [ngStyle]="{'animation-delay':(i + 1) * 0.2+'s'}">
+                    <ion-card class="ion-no-margin">
+                        <img [src]="item?.img">
+                    </ion-card>
+                    <ion-label>
+                        <p class="ion-text-center">{{item?.name}}</p>
+                    </ion-label>
+                </ion-col>
+            </ion-row>
+
+        </div>
+    </div>
+</div>

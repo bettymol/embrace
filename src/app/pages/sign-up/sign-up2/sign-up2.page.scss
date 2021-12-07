@@ -1,0 +1,32 @@
+:host {
+  ion-toolbar {
+    --ion-toolbar-background: transparent !important;
+    --border-width: 0px !important;
+    border-bottom: 0px !important;
+  }
+
+  ion-content {
+    --background: var(--my-custom-color3) !important;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .header-md:after {
+    height: 0px !important;
+  }
+
+  ::ng-deep ion-item {
+    --background: #e7215fc7 !important;
+  }
+
+  .top-background {
+    height: 200px;
+    position: relative;
+  }
+
+  ion-avatar {
+    margin: -60px auto 20px;
+  }
+}

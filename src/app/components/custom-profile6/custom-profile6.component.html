@@ -1,0 +1,101 @@
+<ion-grid class="ion-no-padding">
+    <ion-row>
+        <ion-col size="12" class="ion-no-padding">
+            <ion-card class="ion-no-margin ion-padding background-size ion-text-center top-card"
+                      [ngStyle]="{'background-image':'url('+user.backImg+')'}">
+                <img [src]="user.img">
+                <h4>{{user.name}}</h4>
+                <p><strong>{{user.location}}</strong></p>
+                <ion-item lines="none" class="ion-no-padding ion-no-margin transparent overflow">
+                    <ion-icon name="camera" color="light"></ion-icon>
+                    <ion-label class="ion-padding-start">
+                        <p>9 recent photos</p>
+                    </ion-label>
+                    <ion-avatar slot="end" class="color1 like">
+                        <ion-icon name="mail" size="large" color="light"></ion-icon>
+                    </ion-avatar>
+                    <ion-avatar slot="end" class="color2 like">
+                        <ion-icon name="heart" size="large" color="light"></ion-icon>
+                    </ion-avatar>
+                </ion-item>
+            </ion-card>
+
+            <ion-item lines="none" style="margin-top: 65px">
+                <ion-icon name="happy" size="large" color="warning"></ion-icon>
+                <div class="line"></div>
+                <ion-label class="ion-padding-start">
+                    <h5>About {{user.name}}</h5>
+                    <p class="ion-text-wrap">I love ionic theme template,Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. </p>
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-icon name="people" size="large" color="warning"></ion-icon>
+                <div class="line"></div>
+                <ion-label class="ion-padding-start">
+                    <h5>10 Social Friends!</h5>
+                    <ion-row>
+                        <ion-col size="12" style="display: flex;flex-direction: row;">
+                            <ion-avatar>
+                                <img src="assets/images/avatar/1.jpg">
+                            </ion-avatar>
+                            <ion-avatar>
+                                <img src="assets/images/avatar/2.jpg">
+                            </ion-avatar>
+                            <ion-avatar>
+                                <img src="assets/images/avatar/3.jpg">
+                            </ion-avatar>
+                            <ion-avatar>
+                                <img src="assets/images/avatar/4.jpg">
+                            </ion-avatar>
+                            <ion-avatar>
+                                <img src="assets/images/avatar/5.jpg">
+                            </ion-avatar>
+                        </ion-col>
+                    </ion-row>
+                    <span class="ion-text-uppercase">23k Followers you know</span>
+                </ion-label>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-icon name="paw" size="large" color="warning"></ion-icon>
+                <div class="line"></div>
+                <ion-label class="ion-padding-start">
+                    <h5>Mutual Interests</h5>
+                    <p>
+                        <ion-badge color="warning">Food</ion-badge>
+                        <ion-badge color="favorite">Drawing</ion-badge>
+                        <ion-badge color="danger">Makeup</ion-badge>
+                        <ion-badge color="warning">Movie</ion-badge>
+                    </p>
+                    <p>
+                        <ion-badge color="light">Swimming</ion-badge>
+                        <ion-badge color="favorite">Music</ion-badge>
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12" class="ion-no-padding" *ngFor="let item of list">
+            <ion-card>
+                <ion-card-content class="background-size ion-no-padding"
+                                  [ngStyle]="{'background-image':'url('+item.img+')'}"
+                                  style="height: 260px">
+                    <ion-item lines="none" class="transparent ion-no-padding"
+                              style="position: absolute; bottom:0px;width: 100%;">
+                        <ion-icon name="home"></ion-icon>
+                        <ion-label><span>{{item.cate}}</span></ion-label>
+                        <ion-label slot="end" class="ion-text-right"><span>{{item.date}}</span></ion-label>
+                    </ion-item>
+                </ion-card-content>
+                <ion-item lines="none" class="ion-no-margin no-border-radius color3">
+                    <ion-label>
+                        <h4>{{item.title}}</h4>
+                        <span>{{item.content}}</span>
+                    </ion-label>
+                    <ion-icon name="more" slot="end" color="light"></ion-icon>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,34 @@
+:host {
+  .slide {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    min-height: 150px;
+
+    ion-card {
+      margin: 4px 4px 4px 4px !important;
+      width: 100px;
+      height: auto;
+      flex: none;
+    }
+
+    &.cover {
+      background-size: 41px 100%, 61px 100%, 83px 100%;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+    }
+  }
+
+  ion-card-content {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  p {
+    color: white !important;
+  }
+
+  img {
+    width: 25px;
+  }
+}

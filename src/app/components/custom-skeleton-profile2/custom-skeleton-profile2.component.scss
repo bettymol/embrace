@@ -1,0 +1,27 @@
+:host {
+  ion-badge {
+    width: 100px;
+    margin-top: 30px;
+  }
+
+  ion-avatar {
+    img {
+      filter: blur(2px) !important;
+    }
+  }
+
+  .header {
+    height: 200px;
+    background-color: var(--ion-color-warning);
+    border-radius: 0 0 50% 50%;
+  }
+
+  ion-avatar {
+    margin: 150px auto !important;
+    z-index: 999;
+  }
+
+  ion-skeleton-text {
+    --background-rgb: 255, 255, 0;
+  }
+}

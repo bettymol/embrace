@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Avatar Skeleton List</ion-title>
+        <ion-buttons slot="end">
+            <ng-template [ngIf]="isLoading" [ngIfElse]="eye">
+                <ion-button (click)="onToggle()">
+                    <ion-icon name="eye-off" color="warning" slot="icon-only"></ion-icon>
+                </ion-button>
+                <ion-button (click)="onToggleDisplay()">
+                    <ion-icon name="nuclear" color="warning" slot="icon-only"></ion-icon>
+                </ion-button>
+            </ng-template>
+            <ng-template #eye>
+                <ion-button (click)="onToggle()">
+                    <ion-icon name="eye" color="warning" slot="icon-only"></ion-icon>
+                </ion-button>
+            </ng-template>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-skeleton [avatar]="isAvatar" [rows]="8" *ngIf="isLoading"></custom-skeleton>
+    <custom-loading4 *ngIf="!isLoading" [list]="list"></custom-loading4>
+</ion-content>

@@ -1,0 +1,60 @@
+:host {
+  ion-card {
+    height: 230px;
+  }
+
+  ion-item {
+    --background: transparent;
+    margin: 0px !important;
+    --inner-padding-end: 0px;
+  }
+
+  .left {
+    flex: 0 0 130px !important;
+  }
+
+  .green {
+    background: #b0e867 !important;
+  }
+
+  .green1 {
+    background: #a8e05f !important;
+  }
+
+  .green2 {
+    background: #80a84b !important;
+  }
+
+  ion-avatar {
+    margin: 15px auto 5px;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 0px;
+    width: 97%;
+    margin: 0px;
+  }
+
+  ion-badge {
+    padding: 3px;
+    width: 57px;
+  }
+
+  .weather {
+    display: flex;
+    align-items: center;
+  }
+
+  h3, h4, h5, p {
+    color: white;
+  }
+
+  .margin1 {
+    margin-left: 8px;
+  }
+
+  .margin2 {
+    margin-right: 8px;
+  }
+}

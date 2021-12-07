@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar [class.active]="isActive">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-segment [(ngModel)]="selectType" color="warning">
+            <ion-segment-button *ngFor="let item of segmentList" [value]="item">
+                <ion-label class="ion-text-uppercase">{{item}}</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true"
+             (ionScroll)="onScroll($event)">
+
+    <custom-skeleton-profile7 [fList]="fList" [user]="user" *ngIf="isLoading"></custom-skeleton-profile7>
+    <custom-profile7 [selectType]="selectType" [user]="user" [fList]="fList"
+                     [friendList]="friendList" [gList]="groupList" *ngIf="!isLoading"></custom-profile7>
+</ion-content>

@@ -1,0 +1,28 @@
+:host {
+  .top-back {
+    height: 200px;
+  }
+
+  .user-card {
+    margin-top: -100px;
+    overflow: visible;
+  }
+
+  ion-item {
+    --inner-padding-end: 0px;
+    margin: 0px 8px 0px 8px !important;
+    overflow: scroll;
+  }
+
+  .user-avatar {
+    margin: -50px auto 20px;
+  }
+
+  h4 {
+    color: white;
+  }
+
+  ion-avatar {
+    flex-shrink: 0;
+  }
+}

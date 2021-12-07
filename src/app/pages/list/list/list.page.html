@@ -1,0 +1,5 @@
+<custom-header1 [title]="'Product List'" (onSearch)="onSearch($event)"></custom-header1>
+<ion-content>
+    <custom-product-list [list]="list"></custom-product-list>
+    <custom-pagination [pageData]="pageList" (onPage)="onPage($event)"></custom-pagination>
+</ion-content>

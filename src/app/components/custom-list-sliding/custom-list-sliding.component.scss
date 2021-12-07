@@ -1,0 +1,18 @@
+:host {
+  ion-note {
+    background: var(--my-custom-active);
+    height: 100%;
+
+    ion-icon {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  ion-item {
+    --inner-padding-end: 0px;
+  }
+}

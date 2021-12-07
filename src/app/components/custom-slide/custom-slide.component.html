@@ -1,0 +1,28 @@
+<div class="slide" [class.cover]="isCover">
+    <ion-card class="background-size" *ngFor="let item of list"
+              [ngStyle]="{'background-image': 'url('+item.img+')'}">
+        <ng-template [ngIf]="item.hasOwnProperty('favorite')">
+            <ion-button fill="clear" class="ion-no-padding ion-no-margin" (click)="onToggle(item)">
+                <ng-template [ngIf]="item?.favorite" [ngIfElse]="no">
+                    <ion-icon slot="icon-only" name="heart" color="danger"></ion-icon>
+                </ng-template>
+                <ng-template #no>
+                    <ion-icon slot="icon-only" name="heart-empty" color="light"></ion-icon>
+                </ng-template>
+            </ion-button>
+        </ng-template>
+
+        <ion-card-content class="ion-no-padding">
+            <ng-template [ngIf]="item.hasOwnProperty('name')">
+                <p>{{item?.name}}</p>
+            </ng-template>
+
+            <ng-template [ngIf]="item.hasOwnProperty('fresh')">
+                <ion-chip class="transparent"><img src="assets/images/fresh.png">
+                    <ion-label color="light">{{item?.fresh}}</ion-label>
+                </ion-chip>
+            </ng-template>
+        </ion-card-content>
+
+    </ion-card>
+</div>

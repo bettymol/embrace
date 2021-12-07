@@ -1,0 +1,29 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" *ngFor="let item of list">
+            <ion-card class="ion-no-margin">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-badge color="warning">
+                        {{item.title}}
+                    </ion-badge>
+                </ion-item>
+                <ion-item lines="none" class="transparent ion-no-padding ion-no-margin">
+                    <ion-thumbnail class="main-img">
+                        <img [src]="item.img">
+                    </ion-thumbnail>
+                    <ion-label class="ion-no-margin">
+                        <ion-thumbnail class="second-img">
+                            <img [src]="item.img1">
+                        </ion-thumbnail>
+                        <ion-thumbnail class="second-img">
+                            <img [src]="item.img2">
+                        </ion-thumbnail>
+                        <ion-thumbnail class="second-img">
+                            <img [src]="item.img3">
+                        </ion-thumbnail>
+                    </ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

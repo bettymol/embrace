@@ -1,0 +1,36 @@
+:host {
+  $bg: #530156;
+
+  .background-size {
+    height: 245px;
+
+  }
+
+  ion-card {
+    border-radius: 0px !important;
+    margin: 0px 0px 10px 0px !important;
+    background-color: $bg !important;
+
+    &:first-child {
+      margin: 0px !important;
+    }
+
+    &:nth-child(2) {
+      margin: 0px 0px 10px 0px !important;
+    }
+  }
+
+  ion-avatar {
+    margin: 20px auto;
+  }
+
+  ion-item {
+    --inner-padding-end: 0px !important;
+    margin: 0px 0px 0px 8px !important;
+    --background: $bg !important;
+  }
+
+  h3 {
+    color: white !important;
+  }
+}

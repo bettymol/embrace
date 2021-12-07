@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar [class.active]="isActive">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Content Scroll</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" [scrollEvents]="true" (ionScroll)="onScroll($event)">
+    <custom-scroll4 [user]="user" (onPhoto)="onPhoto($event)"></custom-scroll4>
+    <custom-product-list4 [list]="list"></custom-product-list4>
+</ion-content>

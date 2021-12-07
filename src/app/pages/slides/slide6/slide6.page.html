@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Multiple Slide</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item lines="none" class="ion-no-margin ion-no-padding transparent">
+        <ion-label color="light">Centered Slides</ion-label>
+    </ion-item>
+    <ion-slides [pager]="true" [options]="slideOpts">
+        <ion-slide *ngFor="let item of list">
+            <img [src]="item">
+        </ion-slide>
+    </ion-slides>
+
+
+    <ion-item lines="none" class="ion-no-margin ion-no-padding transparent">
+        <ion-label color="light">Free Mode / No Fixed Positions</ion-label>
+    </ion-item>
+    <ion-slides [pager]="true" [options]="slideOpts1">
+        <ion-slide *ngFor="let item of list">
+            <img [src]="item">
+        </ion-slide>
+    </ion-slides>
+
+
+    <ion-item lines="none" class="ion-no-margin ion-no-padding transparent">
+        <ion-label color="light">Multi Row Slides Layout</ion-label>
+    </ion-item>
+    <ion-slides [pager]="true" [options]="slideOpts2">
+        <ion-slide *ngFor="let item of list">
+            <img [src]="item">
+        </ion-slide>
+    </ion-slides>
+
+    <ion-item lines="none" class="ion-no-margin ion-no-padding transparent">
+        <ion-label color="light">Responsive Breakpoints</ion-label>
+    </ion-item>
+    <ion-slides [pager]="true" [options]="slideOpts3">
+        <ion-slide *ngFor="let item of list">
+            <img [src]="item">
+        </ion-slide>
+    </ion-slides>
+
+
+</ion-content>

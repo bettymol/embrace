@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Go Bottom</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="onScroll($event)">
+    <custom-scroll3 [list]="list"></custom-scroll3>
+
+    <ion-fab slot="fixed" vertical="top" horizontal="end">
+        <ion-fab-button color="warning" (click)="goBottom()">
+            <ion-icon name="md-arrow-down"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

@@ -1,0 +1,82 @@
+<ion-row class="header"></ion-row>
+<ion-grid class="box">
+    <ion-row>
+        <ion-col size="12">
+            <ion-card class="ion-no-padding ion-no-margin">
+                <ion-item lines="none">
+                    <ion-avatar>
+                        <ion-skeleton-text animated></ion-skeleton-text>
+                    </ion-avatar>
+                    <ion-label class="ion-padding-start">
+                        <h4>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </h4>
+                    </ion-label>
+                    <ion-icon name="thumbs-up" color="medium" size="large"></ion-icon>
+                </ion-item>
+                <ion-item lines="none" class="ion-text-center ion-no-padding">
+                    <ion-label *ngFor="let item of fList">
+                        <h5>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </h5>
+                        <p>
+                            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+                <ion-item lines="none">
+                    <ion-icon name="notifications-outline" color="medium" size="large"></ion-icon>
+                    <ion-label>
+                        <p class="ion-text-wrap">
+                            <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>
+                        </p>
+                    </ion-label>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12">
+            <ion-item lines="none" class="ion-text-center ion-no-padding">
+                <ion-label *ngFor="let item of tList">
+                    <ion-icon [name]="item" size="large" color="medium"></ion-icon>
+                    <p>
+                        <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12">
+            <ion-item lines="none" class="ion-text-center ion-no-padding">
+                <ion-label *ngFor="let item of t2List">
+                    <ion-icon [name]="item.icon" size="large" color="medium"></ion-icon>
+                    <p>
+                        <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                    </p>
+                </ion-label>
+            </ion-item>
+        </ion-col>
+        <ion-col size="12">
+            <ion-card class="ion-no-margin ion-no-padding bottom-card" style="padding-bottom: 10px">
+                <ion-item>
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-icon slot="end" name="ios-arrow-forward" color="medium" size="small"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-icon slot="end" name="ios-arrow-forward" color="medium" size="small"></ion-icon>
+                </ion-item>
+                <ion-item>
+                    <ion-label>
+                        <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                    </ion-label>
+                    <ion-icon slot="end" name="ios-arrow-forward" color="medium" size="small"></ion-icon>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

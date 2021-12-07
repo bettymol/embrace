@@ -1,0 +1,41 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size-md="6" size="12" *ngFor="let item of list">
+            <ion-card class="ion-no-margin" [class.active]="item.active">
+                <ion-item lines="none" class="ion-no-padding">
+                    <ion-thumbnail>
+                        <img [src]="item.logo">
+                    </ion-thumbnail>
+                    <ion-label class="ion-padding-start">
+                        <p class="ion-text-uppercase">{{item.date}}</p>
+                        <h4 class="ion-text-wrap"><strong>{{item.title}}</strong></h4>
+                        <div>
+                            <ion-icon name="pin" color="light"></ion-icon>
+                            <p>{{item.city}}</p>
+                        </div>
+                        <div>
+                            <ion-icon name="logo-usd" color="warning"></ion-icon>
+                            <p>{{item.money}}</p>
+                        </div>
+                        <ion-chip color="warning">
+                            {{item.intro}}
+                        </ion-chip>
+                        <ion-button fill="clear" class="ion-float-right ion-no-padding"
+                                    (click)="item.active=!item.active">
+                            <ng-template [ngIf]="!item.active" [ngIfElse]="no">
+                                <ion-badge color="success">More</ion-badge>
+                            </ng-template>
+                            <ng-template #no>
+                                <ion-badge color="danger">Close</ion-badge>
+                            </ng-template>
+
+                        </ion-button>
+                    </ion-label>
+                </ion-item>
+                <ion-card-content>
+                    <p>{{item.description}}</p>
+                </ion-card-content>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,31 @@
+<ion-tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="home" #home [layout]="home.selected?'icon-top':'label-hide'">
+            <ng-template [ngIf]="home.selected" [ngIfElse]="noHome">
+                <ion-icon name="happy" color="warning"></ion-icon>
+            </ng-template>
+            <ng-template #noHome>
+                <ion-icon name="home"></ion-icon>
+            </ng-template>
+            <ion-label>Home</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="card" #card [layout]="card.selected?'icon-top':'label-hide'">
+            <ng-template [ngIf]="card.selected" [ngIfElse]="noCard">
+                <ion-icon name="star" color="success"></ion-icon>
+            </ng-template>
+            <ng-template #noCard>
+                <ion-icon name="snow"></ion-icon>
+            </ng-template>
+            <ion-label>Card</ion-label>
+        </ion-tab-button>
+        <ion-tab-button tab="profile" #profile [layout]="profile.selected?'icon-top':'label-hide'">
+            <ng-template [ngIf]="profile.selected" [ngIfElse]="noProfile">
+                <ion-icon name="heart" color="danger"></ion-icon>
+            </ng-template>
+            <ng-template #noProfile>
+                <ion-icon name="md-person"></ion-icon>
+            </ng-template>
+            <ion-label>Profile</ion-label>
+        </ion-tab-button>
+    </ion-tab-bar>
+</ion-tabs>

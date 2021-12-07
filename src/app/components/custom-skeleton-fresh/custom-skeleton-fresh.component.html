@@ -1,0 +1,29 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12" size-md="6" *ngFor="let item of list">
+            <ion-card class="ion-no-margin ion-no-padding">
+                <div>
+                    <div class="left">
+                        <custom-skeleton-img></custom-skeleton-img>
+                    </div>
+                    <div class="right">
+                        <ion-card-header class="ion-no-padding">
+                            <ion-skeleton-text animated style="width: 68%;"></ion-skeleton-text>
+                        </ion-card-header>
+                        <ion-avatar>
+                            <ion-skeleton-text animated></ion-skeleton-text>
+                        </ion-avatar>
+                        <ion-item lines="none" class="ion-no-padding ion-no-margin transparent">
+                            <ion-label class="ion-no-margin">
+                                <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+                                <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+                                <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+                                <ion-skeleton-text animated style="width: 90%"></ion-skeleton-text>
+                            </ion-label>
+                        </ion-item>
+                    </div>
+                </div>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+</ion-grid>

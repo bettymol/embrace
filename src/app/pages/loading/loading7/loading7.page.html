@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Card Skeleton List</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="onToggle()">
+                <ng-template [ngIf]="isLoading" [ngIfElse]="eye">
+                    <ion-icon name="eye-off" color="warning" slot="icon-only"></ion-icon>
+                </ng-template>
+                <ng-template #eye>
+                    <ion-icon name="eye" color="warning" slot="icon-only"></ion-icon>
+                </ng-template>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <custom-skeleton-card2 [list]="list" *ngIf="isLoading"></custom-skeleton-card2>
+    <custom-loading7 [list]="list" *ngIf="!isLoading"></custom-loading7>
+</ion-content>

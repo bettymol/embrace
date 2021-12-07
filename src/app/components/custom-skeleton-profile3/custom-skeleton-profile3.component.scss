@@ -1,0 +1,38 @@
+:host {
+  .top-card {
+    height: 300px;
+    padding-top: 60px;
+  }
+
+  ion-badge {
+    width: 100px;
+  }
+
+  ion-avatar {
+    margin: 10px auto !important;
+  }
+
+  ion-thumbnail {
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+  }
+
+  ion-item {
+    margin: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  h3, h5, p {
+    color: white !important;
+  }
+
+  .tool {
+    padding: 8px 0px 8px 0px;
+    background-color: #fd248c !important;
+  }
+
+  ion-skeleton-text {
+    --background-rgb: 0, 255, 0;
+  }
+}

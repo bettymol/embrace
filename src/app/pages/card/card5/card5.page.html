@@ -1,0 +1,13 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Job Card</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <custom-skeleton-card5 [list]="list" *ngIf="isLoading"></custom-skeleton-card5>
+    <custom-card5 [list]="list" *ngIf="!isLoading"></custom-card5>
+</ion-content>

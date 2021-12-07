@@ -1,0 +1,11 @@
+:host {
+  ion-card {
+    margin: 0px !important;
+    padding: 10px 8px 0px 8px;
+  }
+
+  ::ng-deep.swiper-pagination-bullet-active {
+    color: #fff;
+    background: var(--my-custom-active) !important;
+  }
+}

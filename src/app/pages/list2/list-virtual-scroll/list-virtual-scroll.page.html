@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Virtual Scroll List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-virtual-scroll [items]="items" approxItemHeight="320px">
+        <ion-card *virtualItem="let item; let itemBounds = bounds;">
+            <img [src]="item.img">
+            <ion-card-header>
+                <ion-card-title>
+                    <h4>{{ item.name }}</h4>
+                </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <p>{{ item.content }}</p>
+            </ion-card-content>
+        </ion-card>
+    </ion-virtual-scroll>
+</ion-content>

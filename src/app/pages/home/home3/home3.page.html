@@ -1,0 +1,17 @@
+<custom-header [title]="'Home 3'" [hidden]="false"></custom-header>
+
+<ion-content>
+    <custom-slides [list]="list" [option]="option"></custom-slides>
+
+    <ion-row class="ion-text-center ion-margin-top">
+        <ion-col size="6" *ngFor="let item of pList">
+            <ion-card class="ion-no-margin">
+                <img [src]="item.img">
+                <h6>{{item.name}}</h6>
+            </ion-card>
+        </ion-col>
+        <ion-col size="12">
+            <img src="assets/images/list/18.jpg">
+        </ion-col>
+    </ion-row>
+</ion-content>

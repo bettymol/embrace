@@ -1,0 +1,22 @@
+:host {
+  ion-grid {
+    margin-top: 30px;
+  }
+
+  ion-card {
+    overflow: visible;
+    margin-top: 25px;
+  }
+
+  ion-avatar {
+    position: absolute;
+    margin-top: -30px;
+    overflow: visible;
+    width: 60px;
+    height: 60px;
+  }
+
+  ion-item {
+    --inner-padding-end: 0px;
+  }
+}

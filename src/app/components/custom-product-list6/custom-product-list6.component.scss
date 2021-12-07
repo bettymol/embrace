@@ -1,0 +1,27 @@
+:host {
+  .main-img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .second-img {
+    width: 100%;
+    height: 50%;
+    margin: 3px;
+  }
+
+  ion-label {
+    ion-thumbnail {
+      margin: 3px 0px 3px 3px;
+    }
+
+    ion-thumbnail:first-child {
+      margin: 0px 0px 3px 3px;
+    }
+
+    ion-thumbnail:last-child {
+      margin: 0px 0px 0px 3px;
+    }
+  }
+
+}

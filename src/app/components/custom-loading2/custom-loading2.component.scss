@@ -1,0 +1,29 @@
+:host {
+  ion-thumbnail {
+    width: 145px;
+    height: 100%;
+  }
+
+  ion-card {
+    overflow: visible;
+    margin-left: 40px;
+  }
+
+  ion-avatar {
+    overflow: visible;
+    position: absolute;
+    z-index: 99;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  ion-icon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  ion-item{
+    --inner-padding-end: 0 !important;
+  }
+}

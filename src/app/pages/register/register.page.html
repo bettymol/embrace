@@ -1,0 +1,58 @@
+
+
+<ion-content>
+
+        
+        
+               <ion-row class="row">
+                <h3>Register</h3>
+            <ion-col size="12" >
+                
+                    <ion-card class="transparent">
+                        <ion-item lines="none">
+                           
+                            <ion-input  [(ngModel)]="signupdata.username" placeholder="User Name"  type="text"></ion-input>
+                        </ion-item>
+                         <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="signupdata.email" placeholder="Email" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="signupdata.password" placeholder="Password" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="signupdata.gender" placeholder="Gender" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="signupdata.phone" placeholder="Phone Number" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="signupdata.address" placeholder="Address" type="text"></ion-input>
+                        </ion-item>
+                        <ion-item lines="none">
+                            
+                            <ion-input [(ngModel)]="signupdata.usertype" placeholder="User Type" type="text"></ion-input>
+                        </ion-item>
+                    </ion-card>
+                
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12" >
+                <ion-button expand="block" (click)="register()">Register
+                </ion-button>
+                 
+            </ion-col>
+
+        </ion-row>
+      
+                   
+            
+              
+            
+   
+</ion-content>

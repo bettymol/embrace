@@ -1,0 +1,70 @@
+<custom-header [title]="'Home 7'" [hidden]="false"></custom-header>
+
+<ion-content>
+    <custom-slides [list]="list" [option]="option"></custom-slides>
+
+    <ion-segment [(ngModel)]="selectType" color="warning" (ionChange)="segmentChanged($event)">
+        <ion-segment-button *ngFor="let item of segmentList" [value]="item">
+            <ion-label>{{item}}</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <ng-container [ngSwitch]="selectType">
+        <ng-template [ngSwitchCase]="'TOPS'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of pList">
+                    <ion-card class="ion-no-margin ion-text-center">
+                        <img [src]="item.img">
+                        <h5>{{item.name}}</h5>
+                        <ion-item lines="none">
+                            <ion-icon slot="start" name="heart" color="secondary"></ion-icon>
+                            <ion-icon slot="end" name="ios-cart" color="secondary"></ion-icon>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'RECOMMEND'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of pList">
+                    <ion-card class="ion-no-margin ion-text-center">
+                        <img [src]="item.img">
+                        <h5>{{item.name}}</h5>
+                        <ion-item lines="none">
+                            <ion-icon slot="start" name="heart" color="secondary"></ion-icon>
+                            <ion-icon slot="end" name="ios-cart" color="secondary"></ion-icon>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ng-template>
+        <ng-template [ngSwitchCase]="'NEWS'">
+            <ion-row>
+                <ion-col size="6" *ngFor="let item of pList">
+                    <ion-card class="ion-no-margin ion-text-center">
+                        <img [src]="item.img">
+                        <h5>{{item.name}}</h5>
+                        <ion-item lines="none">
+                            <ion-icon slot="start" name="heart" color="secondary"></ion-icon>
+                            <ion-icon slot="end" name="ios-cart" color="secondary"></ion-icon>
+                        </ion-item>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ng-template>
+    </ng-container>
+    <custom-slides-animation [list]="topList" [animation]="'coverflow'" [pager]="false"></custom-slides-animation>
+
+    <ion-slides pager="true">
+        <ion-slide *ngFor="let item of userList">
+            <ion-card class=" ion-no-padding">
+                <ion-avatar>
+                    <img [src]="item.img">
+                </ion-avatar>
+                <h5>{{item.name}}</h5>
+                <span class="price">teacher</span>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac eros est.</p>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
